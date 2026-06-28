@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # 1. El motor PHP personalizado con las extensiones de Laravel
+  fintech-php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: fintech-backend-php
+    restart: unless-stopped
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - fintech-db # <-- Laravel espera a que la base de datos inicie
+    networks:
+      - proxy-public-network
+
+  # 2. El servidor Nginx para los archivos estáticos y enrutamiento
+  fintech-nginx:
+    image: 'nginx:alpine'
+    container_name: fintech-backend-nginx
+    restart: unless-stopped
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - fintech-php
+    networks:
+      - proxy-public-network
+
+  # 3. El motor de Base de Datos MySQL
+  fintech-db:
+    image: 'mysql:8.0'
+    container_name: fintech-backend-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: fintech_db
+      MYSQL_USER: fintech_user
+      MYSQL_PASSWORD: fintech_password
+      MYSQL_ROOT_PASSWORD: root_password_segura
+    volumes:
+      - fintech-db-data:/var/lib/mysql # <-- Volumen persistente para tus tablas
+    networks:
+      - proxy-public-network
+
+networks:
+  proxy-public-network:
+    external: true
+
+volumes:
+  fintech-db-data: # <-- Declaramos el volumen

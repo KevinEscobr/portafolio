@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Custom Scrollbar for Pine Green theme */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #040807;
+}
+::-webkit-scrollbar-thumb {
+    background: #0b3c2d;
+    border-radius: 9999px;
+    border: 2px solid #040807;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #10b981;
+}
+
+/* Base custom styles to enhance performance and transitions */
+body {
+    scrollbar-gutter: stable;
+}
+
+canvas {
+    display: block;
+    outline: none;
+}
