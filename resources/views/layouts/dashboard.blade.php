@@ -11,8 +11,9 @@
     <!-- Sidebar -->
     <aside class="w-full md:w-64 bg-[#050c09] border-r border-[#1b4d3e]/20 flex flex-col shrink-0">
         <!-- Logo -->
-        <div class="h-20 border-b border-[#1b4d3e]/20 flex items-center px-6">
-            <span class="text-lg font-bold tracking-wider text-emerald-400">ADMIN PORTAFOLIO</span>
+        <div class="h-20 border-b border-[#1b4d3e]/20 flex items-center px-6 gap-3">
+            <img src="{{ asset('images/logo.jpg') }}" alt="Logo KVN" class="h-10 w-auto rounded-lg object-contain">
+            <span class="text-sm font-bold tracking-wider text-emerald-400 uppercase">Admin</span>
         </div>
         
         <!-- User Info -->

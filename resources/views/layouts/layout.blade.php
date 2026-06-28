@@ -20,8 +20,8 @@
     <!-- Barra de Navegación -->
     <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#050c09]/60 border-b border-[#1b4d3e]/20 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
-                PORTAFOLIO
+            <a href="#" class="flex items-center">
+                <img src="{{ asset('images/logo.jpg') }}" alt="Logo KVN" class="h-12 w-auto object-contain hover:scale-105 transition-transform duration-300">
             </a>
             <div class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#inicio" class="hover:text-emerald-400 transition-colors">Inicio</a>
