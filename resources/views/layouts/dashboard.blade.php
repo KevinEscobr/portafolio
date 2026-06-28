@@ -12,8 +12,12 @@
     <aside class="w-full md:w-64 bg-[#050c09] border-r border-[#1b4d3e]/20 flex flex-col shrink-0">
         <!-- Logo -->
         <div class="h-20 border-b border-[#1b4d3e]/20 flex items-center px-6 gap-3">
-            <img src="{{ asset('images/logo.jpg') }}" alt="Logo KVN" class="h-10 w-auto rounded-lg object-contain">
-            <span class="text-sm font-bold tracking-wider text-emerald-400 uppercase">Admin</span>
+            <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+            </div>
+            <span class="text-sm font-bold tracking-wider text-white">Kevin E.</span>
         </div>
         
         <!-- User Info -->
