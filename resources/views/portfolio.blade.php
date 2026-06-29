@@ -211,10 +211,10 @@
     <!-- Modal de Detalles de Proyecto -->
     <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 hidden">
         <!-- Contenedor del Modal -->
-        <div id="project-modal-content" class="relative w-full max-w-3xl bg-[#050c09]/95 backdrop-blur-xl border border-[#1b4d3e]/30 rounded-2xl shadow-[0_0_50px_rgba(16,185,129,0.25)] overflow-hidden scale-95 transition-all duration-300 flex flex-col max-h-[90vh]">
+        <div id="project-modal-content" class="relative w-full max-w-xl bg-[#050c09]/95 backdrop-blur-xl border border-[#1b4d3e]/30 rounded-2xl shadow-[0_0_50px_rgba(16,185,129,0.25)] overflow-hidden scale-95 transition-all duration-300 flex flex-col max-h-[85vh]">
             
             <!-- Cabecera / Imagen -->
-            <div class="relative aspect-video w-full overflow-hidden bg-emerald-950/40 border-b border-[#1b4d3e]/20">
+            <div class="relative h-48 sm:h-56 w-full overflow-hidden bg-emerald-950/40 border-b border-[#1b4d3e]/20">
                 <img id="modal-project-image" src="" alt="" class="w-full h-full object-cover">
                 <div id="modal-project-image-fallback" class="hidden w-full h-full flex items-center justify-center bg-gradient-to-br from-[#0b3c2d] to-[#050c09]">
                     <span class="text-gray-500 font-mono text-xs">[ Sin Vista Previa ]</span>
