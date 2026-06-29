@@ -26,6 +26,7 @@ class PortfolioController extends Controller
             'bio' => ProfileSetting::getValue('bio', 'Hola, soy desarrollador fullstack.'),
             'hero_title' => ProfileSetting::getValue('hero_title', 'Hola, Soy Desarrollador Web'),
             'hero_subtitle' => ProfileSetting::getValue('hero_subtitle', 'Diseño y desarrollo experiencias digitales interactivas.'),
+            'whatsapp_message' => ProfileSetting::getValue('whatsapp_message', '¡Hola! Me gustaría contactarme contigo.'),
         ];
 
         return view('portfolio', compact('projects', 'settings'));

@@ -40,13 +40,18 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="phone" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">WhatsApp / Teléfono de Contacto</label>
+                    <label for="phone" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">WhatsApp</label>
                     <input type="text" name="phone" id="phone" value="{{ old('phone', $settings['phone'] ?? '') }}" placeholder="Ej: +56912345678" class="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-[#1b4d3e]/40 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 text-sm text-white">
                 </div>
                 <div>
                     <label for="email" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Email de Contacto Público</label>
                     <input type="email" name="email" id="email" value="{{ old('email', $settings['email'] ?? '') }}" placeholder="Ej: contacto@nennge.me" class="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-[#1b4d3e]/40 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 text-sm text-white">
                 </div>
+            </div>
+
+            <div>
+                <label for="whatsapp_message" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Mensaje Personalizado de WhatsApp</label>
+                <input type="text" name="whatsapp_message" id="whatsapp_message" value="{{ old('whatsapp_message', $settings['whatsapp_message'] ?? '') }}" placeholder="Ej: ¡Hola! Me gustaría contactarme contigo." class="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-[#1b4d3e]/40 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 text-sm text-white">
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

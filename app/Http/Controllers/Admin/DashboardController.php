@@ -22,6 +22,7 @@ class DashboardController extends Controller
             'bio' => ProfileSetting::getValue('bio'),
             'hero_title' => ProfileSetting::getValue('hero_title'),
             'hero_subtitle' => ProfileSetting::getValue('hero_subtitle'),
+            'whatsapp_message' => ProfileSetting::getValue('whatsapp_message'),
         ];
 
         $user = auth()->user();
@@ -43,6 +44,7 @@ class DashboardController extends Controller
             'bio' => ['nullable', 'string'],
             'hero_title' => ['nullable', 'string', 'max:255'],
             'hero_subtitle' => ['nullable', 'string', 'max:500'],
+            'whatsapp_message' => ['nullable', 'string', 'max:500'],
             
             // Info de Cuenta Administrativa (Privada)
             'admin_name' => ['required', 'string', 'max:255'],
@@ -62,6 +64,7 @@ class DashboardController extends Controller
         ProfileSetting::setValue('bio', $request->input('bio'));
         ProfileSetting::setValue('hero_title', $request->input('hero_title'));
         ProfileSetting::setValue('hero_subtitle', $request->input('hero_subtitle'));
+        ProfileSetting::setValue('whatsapp_message', $request->input('whatsapp_message'));
 
         // Guardar valores del usuario administrador
         $user = auth()->user();

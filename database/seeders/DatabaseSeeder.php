@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             'bio' => 'Desarrollador Full Stack apasionado por las tecnologías web, el backend robusto y las experiencias visuales en 3D interactivo de alto rendimiento.',
             'hero_title' => 'Hola, Soy Desarrollador Web',
             'hero_subtitle' => 'Diseño y desarrollo experiencias digitales interactivas, desde servidores estables hasta mundos en 3D.',
+            'whatsapp_message' => '¡Hola! Me gustaría contactarme contigo.',
         ];
 
         foreach ($defaults as $key => $value) {
