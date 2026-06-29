@@ -1,58 +1,34 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Portafolio Profesional 3D
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este es un portafolio web interactivo desarrollado con el framework Laravel, que combina un diseno moderno y minimalista con interactividad en tres dimensiones.
 
-## About Laravel
+## Caracteristicas Actuales
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Interfaz del Portafolio
+- Fondo interactivo tridimensional con un sistema de particulas y un nucleo holografico central desarrollado con Three.js que reacciona al movimiento del puntero y al desplazamiento vertical de la pagina.
+- Seccion de inicio personalizada con titulos y subtitulos administrables.
+- Seccion Sobre mi con biografia dinamica, listado de habilidades y tarjeta de detalles rapidos de contacto.
+- Cuadricula de proyectos destacados extraidos desde la base de datos, con etiquetas de tecnologias y enlaces directos a sus respectivos repositorios o demostraciones en vivo.
+- Modal interactivo compacto con efecto de desenfoque de fondo para visualizar de forma completa los detalles, imagenes y descripcion extendida de cada proyecto sin saturar la vista principal.
+- Seccion de contacto con botones directos hacia correo electronico, redes profesionales (LinkedIn y GitHub) y un boton de enlace personalizado para enviar un mensaje predefinido directamente a WhatsApp.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Panel de Administacion (Dashboard)
+- Sistema de autenticacion seguro para el administrador del portafolio.
+- Modulo de perfil y configuracion general para modificar en tiempo real la informacion del portafolio (textos del banner, biografia, telefono, correo y enlaces de redes sociales).
+- Modulo CRUD completo para la gestion de proyectos (crear, editar, ver y eliminar) que incluye la carga y almacenamiento de imagenes de vista previa de los trabajos.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Tecnologias Utilizadas
+- Laravel como framework backend.
+- Tailwind CSS para el diseno de los estilos visuales.
+- Three.js para la programacion de los elementos y animaciones 3D.
+- MySQL como sistema de gestion de bases de datos.
+- Javascript nativo para el control del modal, la interactividad de la interfaz y el manejo de los estados de visualizacion.
 
-## Learning Laravel
+## Funcionalidades Pendientes / Faltantes
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Formulario de contacto funcional en el sitio publico que permita el envio de mensajes directos por correo electronico mediante SMTP o servicios de mensajeria externos.
+- Modulo de mensajes en el Dashboard de administracion para almacenar, visualizar, marcar como leidos o responder los correos recibidos a traves del portafolio.
+- Filtro dinamico de proyectos en la vista publica para permitir a los visitantes clasificar los trabajos segun tecnologias utilizadas o categorias especificas sin necesidad de recargar la pagina.
+- Optimizacion automatica de imagenes cargadas en el servidor, convirtiendolas a formatos modernos como WebP y ajustando su resolucion para garantizar tiempos de carga optimos.
+- Soporte multilenguaje para permitir a los visitantes alternar la visualizacion completa del portafolio entre espanol e ingles.
+- Sistema de estadisticas de visitas simple visible desde el panel de administracion para registrar la cantidad de accesos al portafolio y los proyectos mas consultados.
