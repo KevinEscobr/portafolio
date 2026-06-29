@@ -209,7 +209,7 @@
     </section>
 
     <!-- Modal de Detalles de Proyecto -->
-    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 hidden">
         <!-- Contenedor del Modal -->
         <div id="project-modal-content" class="relative w-full max-w-3xl bg-[#050c09]/95 backdrop-blur-xl border border-[#1b4d3e]/30 rounded-2xl shadow-[0_0_50px_rgba(16,185,129,0.25)] overflow-hidden scale-95 transition-all duration-300 flex flex-col max-h-[90vh]">
             
@@ -356,6 +356,9 @@
                     }
 
                     // Mostrar Modal con animación
+                    modal.classList.remove('hidden');
+                    // Forzar reflow para registrar el cambio de display y aplicar transición de opacidad
+                    void modal.offsetWidth;
                     modal.classList.remove('opacity-0', 'pointer-events-none');
                     modalContent.classList.remove('scale-95');
                     modalContent.classList.add('scale-100');
@@ -369,6 +372,13 @@
                 modalContent.classList.remove('scale-100');
                 modalContent.classList.add('scale-95');
                 document.body.style.overflow = '';
+                
+                // Esperar a que la transición termine antes de ocultar con display: none
+                setTimeout(() => {
+                    if (modal.classList.contains('opacity-0')) {
+                        modal.classList.add('hidden');
+                    }
+                }, 300);
             }
 
             closeModalBtn.addEventListener('click', closeModal);
